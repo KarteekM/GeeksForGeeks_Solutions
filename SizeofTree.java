@@ -1,3 +1,16 @@
+class Node{
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
+}
+
 public class SizeofTree {
 	
 	public static int size(Node node){
