@@ -1,0 +1,60 @@
+class Node {
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
+
+}
+
+public class PrintRootToLeaf {
+	
+	
+	public static void print(int arr[],int index){
+		
+		int i=0;
+		for(i=0;i<index;i++){
+			
+			System.out.print(arr[i]);
+			System.out.print(" ");			
+			
+		}
+		System.out.println(" ");		
+	}
+	
+  public static void printPath(int arr[],int index,Node node){
+	  
+	  if(node == null)
+		  return;
+	 
+		arr[index] = node.data;
+		index++;
+		
+	  if(node.left == null && node.right == null){
+		  print(arr,index);
+	  }
+	  
+
+	printPath(arr,index,node.left);
+	printPath(arr,index,node.right);
+  }
+	
+	public static void main(String args[]){
+		Node root = new Node(1);
+		root.left = new Node(2);
+		root.right = new Node(3);
+		root.left.left = new Node(4);
+		root.left.right = new Node(5);
+		root.right.right = new Node(6);
+		
+		int [] arr= new int[50];
+		int index=0;
+		printPath(arr,index,root);
+	}
+
+}
