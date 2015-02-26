@@ -27,6 +27,15 @@ class Stack{
 	  }
 	  return arr[top--];
   }
+  
+  public Node peek(){
+	  if(top<0)
+	  {
+		  //System.out.println("Stack is empty");
+		  return null;
+	  }
+	  return arr[top];
+  }
 }
 
 public class IterativeTraversal {
@@ -88,6 +97,48 @@ public class IterativeTraversal {
 		System.out.println(" ");
 	}
 	
+	//Post-Order Traversal using a single stack
+	public static void iterativePostorder1stack(Node node){
+		
+		Stack s3 = new Stack();
+		Node root=node;
+		
+		if(root == null)return;
+		
+		do{
+			
+			while(root!=null){
+				
+				if(root.right!=null)
+					s3.push(root.right);
+				
+				s3.push(root);
+				root=root.left;
+				
+			}
+			
+			root = s3.pop();
+			
+			
+			
+			if(root.right!=null && root.right==s3.peek()){
+				
+				s3.pop();
+				s3.push(root);
+				root= root.right;
+				
+			}
+			
+			else
+			{
+				System.out.print(root.data);
+				System.out.print(" ");
+				root=null;
+			}
+		}while( s3.top!= -1);
+	}
+	
+	//Post-Order Traversal using 2 stacks
 	public static void iterativePostorder(Node node){
 		
 		if(node == null)
@@ -114,6 +165,7 @@ public class IterativeTraversal {
 			System.out.print(s2.pop().data);
 			System.out.print(" ");
 		}
+		System.out.println(" ");
 	}
 
 	public static void main(String args[]){
@@ -128,6 +180,7 @@ public class IterativeTraversal {
 		iterativePreorder(root);
 		iterativeInorder(root);
 		iterativePostorder(root);
+		iterativePostorder1stack(root);
 		
 	}
 }
