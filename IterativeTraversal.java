@@ -1,3 +1,16 @@
+public class Node {
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
+
+}
 class Stack{
 	Node []arr = new Node[50];
 	int top=-1;
