@@ -1,4 +1,16 @@
+public class Node {
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
 
+}
 public class LeastCommonAncestor {
 	
 	public static Node leastcommonAncestor(Node node,int n1,int n2){
