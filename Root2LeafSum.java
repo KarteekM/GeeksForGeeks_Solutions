@@ -1,32 +1,49 @@
+ class Node{
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
+}
 
 public class Root2LeafSum {
 	
-	public static boolean  root2leafsum(Node node,int value){
+	
+	
+	public static boolean root2leafsum(Node node,int calsum,int value){
 		
+		boolean x=false;
 		if(node == null)
-			return (value ==0);
+			return true;
+		
+		calsum =calsum+node.data;		
+		if(node.left == null && node.right == null){
+			
+			if(calsum == value){
+				return true;
+			}
+			else
+				return false;
+		}
 		
 		else
 		{
-			boolean ans=false;
+			if(node.left !=null){
+				x=x ||root2leafsum(node.left,calsum,value);
+			}
 			
-			int tempsum = value-node.data;
+			if(node.right != null){
+				x=x ||root2leafsum(node.right,calsum,value);
+			}
 			
-			if(tempsum ==0 && node.left == null && node.right == null)
-				return true;
-			
-			
-				if(node.left != null)
-				ans = ans || root2leafsum(node.left,value);
-				
-				if(node.right != null)
-					ans =ans || root2leafsum(node.right, value);
-				
-				return ans;
+			return x;
 		}
 		
-		
-			
 	}
 	
 	public static void main(String args[]){
@@ -37,7 +54,7 @@ public class Root2LeafSum {
 				root.left.right=new Node(5);
 				root.right.left=new Node(2);
 				
-		if(root2leafsum(root,21)){
+		if(root2leafsum(root,0,14)){
 			System.out.println("Sum exists in the path");
 		}
 		else
