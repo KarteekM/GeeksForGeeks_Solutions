@@ -1,4 +1,14 @@
-
+class Node{
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
 public class Foldable {
 	
 	public static boolean foldCheck(Node n1,Node n2){
