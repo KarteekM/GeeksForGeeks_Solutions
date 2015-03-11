@@ -1,6 +1,20 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
+ class Node {
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
+
+}
+
 
 public class IterativeHeight {
 
