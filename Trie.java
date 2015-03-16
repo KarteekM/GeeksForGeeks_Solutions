@@ -74,4 +74,7 @@ public class Trie{
 	}
 }
 
+public static void main(Strin args[]){
+	
+}
 
