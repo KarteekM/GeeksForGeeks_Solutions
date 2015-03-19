@@ -1,3 +1,14 @@
+class Node{
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
 import java.util.LinkedHashMap;
 import java.util.Map;
 
