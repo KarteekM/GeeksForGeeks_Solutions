@@ -1,4 +1,14 @@
-
+ class Node{
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
 public class MergeBalanacedBST {
 	
 	public static int inOrder(Node node,int inOrder[],int i){
