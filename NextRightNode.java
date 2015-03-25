@@ -1,7 +1,18 @@
 import java.util.LinkedList;
 
+class Node {
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
 
-public class Queue<E> {
+class Queue<E> {
 	
 	 private LinkedList<E> list = new LinkedList<E>();
 
