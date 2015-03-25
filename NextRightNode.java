@@ -1,3 +1,50 @@
+import java.util.LinkedList;
+
+
+public class Queue<E> {
+	
+	 private LinkedList<E> list = new LinkedList<E>();
+
+	 
+	  public void enqueue(E item) {
+	    list.addLast(item);
+	    
+	  }
+
+	  public E dequeue() {
+	    return list.poll();
+	  }
+
+	  public boolean hasItems() {
+	    return !list.isEmpty();
+	  }
+
+	  public E front(){
+		  return list.peek();
+	  }
+	  
+	  public int size() {
+	    return list.size();
+	  }
+
+	  public void addItems(Queue<? extends E> q) {
+	    while (q.hasItems())
+	      list.addLast(q.dequeue());
+	  }
+	
+	  public static void main(String args[]){
+		  Queue<Integer> queue = new Queue<Integer>();
+		  queue.enqueue(1);
+		  queue.enqueue(2);
+		  queue.enqueue(3);
+		  queue.enqueue(4);
+		  queue.enqueue(5);
+		  
+		  
+	  }
+	
+}
+
 
 public class NextRightNode {
 	
