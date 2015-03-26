@@ -1,4 +1,15 @@
 
+class Node {
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
 public class PreOrderBST {
 	
 public static Node construct(int []a,int min,int max,int size,int index,int key){
