@@ -1,4 +1,39 @@
 
+ class Node{
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
+	
+class Stack{
+	
+	Node[] a = new Node[100];
+	int top=-1;
+	
+	public void push(Node node){
+		top++;
+		a[top] = node;
+	}
+	
+	public Node pop(){
+		Node x=a[top];
+		top--;
+		return x;
+	}
+	
+	public Node TopofStack(){
+		
+		return a[top];
+	}
+}
+
+
 public class PreOrdertoBST {
 	
 	public static Node constructBST(int a[]){
