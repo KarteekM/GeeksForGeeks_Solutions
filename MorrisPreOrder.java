@@ -1,3 +1,14 @@
+class Node{
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		left =null;
+		this.data=data;
+		right=null;
+	}
 
 public class MorrisPreOrder {
 	
@@ -26,19 +37,19 @@ public class MorrisPreOrder {
 				}
 				
 				
-				if(pre.right == current){
+				if(pre.right == null){
 					
-					pre.right=null;
-					current=current.right;
+					System.out.println(current.data);
+					pre.right =current;
+					current=current.left;			
 					
 				}
 				
 				else
 				{
-					System.out.println(current.data);
-					pre.right =current;
-					current=current.left;
-					
+
+					pre.right=null;
+					current=current.right;
 				}
 			}
 		}
