@@ -1,84 +1,93 @@
 class TernaryNode{
 	
-	char data;
+	char value;
 	TernaryNode left;
 	TernaryNode equal;
 	TernaryNode right;
-	boolean isEndofString;
+	boolean endofString;
 	
-	public TernaryNode(char data) {
+	TernaryNode(char value){
 		
-		this.data =data;
-		this.left =null;
-		this.right =null;
-		this.equal=null;
-		isEndofString=false;
-	
+	 this.value =value;
+	 this.left=null;
+	 this.equal=null;
+	 this.right=null;
+	 this.endofString=false;
+		
 	}
 }
 
 public class TernarySearchTree {
 	
-	boolean searchTST(TernaryNode node,char word[],int i){
+	public static boolean search(TernaryNode node,char word[],int i){
 		
-		if(node == null){
+		if(null == node && i <word.length)
 			return false;
-		}
 		
-	    if(word[i]<node.data){
-	    	searchTST(node.left,word,i+1);
-	    }
-		
-	    else if(word[i] > node.data){
-	    	searchTST(node.right,word,i+1);
-	    }
-	    
-	    else{
-	    	
-	      if(word[i] == '\0'){
-	    	  return node.isEndofString;
-	      }
-	    
-	
-	    	  return searchTST(node.equal,word,i+1);
-	
-	    }
-			
-		return false;
-	}
-	
-	
-	public void insert(TernaryNode node,char value){
-		
-		if(null == node){
-			node = new TernaryNode(value);
-			
-		}
-		
-		else
+		if(word[i] <node.value)
 		{
-			if(value <node.data){
-				insert(node.left,value);				
-			}
-			
-			else if(value > node.data)
+			return search(node.left,word,i);
+		}
+		
+		else if(word[i] >node.value){
+			return search(node.right,word,i);
+		}
+		
+		else{
+			 
+			if(i >= word.length-1)
 			{
-				insert(node.right,value);
-				
-			}
-			
-			else
-			{
-				if(node.data == value)
-				insert(node.equal,value);
+				if(node.endofString == true)
+					return true;
 				
 				else
-					node.isEndofString =true;
+					return false;
 			}
+			
+			return search(node.equal,word,i+1);
+			
 		}
+		
 	}
 
-	
-	
+	public static TernaryNode insert(TernaryNode node,char word[],int i){
+		
+		 if(null == node){
+			node=new TernaryNode(word[i]);
+		 }
+		 
+		 if(word[i] <node.value){
+			 
+			node.left= insert(node.left,word,i);
+		 }
+		 
+		 else if(word[i] >node.value){
+			 node.right=insert(node.right,word,i);
+		 }
+		 
+		 else{
+			 
+			 if( i >=word.length-1)
+				node.endofString=true;
+			 
+			 else
+				 node.equal =insert(node.equal,word,i+1);		 
+		 }
+		 
+		 return node;
+	}
+	public static void main(String args[]){
+		
+		TernaryNode root=null;
+		String s ="cat";
+		String s2 ="water";
+		String s3 ="karteek";
+		root=insert(root,s.toCharArray(),0);
+		insert(root,s2.toCharArray(),0);
+		
+		System.out.println("Value is "+search(root,s2.toCharArray(),0));
+		System.out.println("The value karteek is "+search(root,s3.toCharArray(),0));
+		
+	}
 
 }
