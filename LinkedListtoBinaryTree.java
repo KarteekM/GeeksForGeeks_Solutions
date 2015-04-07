@@ -24,14 +24,14 @@ class LinkedList{
 	
 }
 
-public class LinkedListtoBinaryTree {
+public class LinkedListToBinaryTree {
 
 	public static Node logic(LinkedList l,Node n){
 		
 		if(l == null)
 			return null;
 		
-	Queue3 q= new Queue3();
+	Queue q= new Queue();
 		
 		n= new Node(l.data);
 	   q.insert(n);
@@ -39,15 +39,15 @@ public class LinkedListtoBinaryTree {
 	   
 	   while(l!=null){
 		   
-		   n = q.remove();
+		  Node n1 = q.remove();
 		   
 		    
-		    n.left = new Node(l.data);
-		    q.insert(n.left);
+		    n1.left = new Node(l.data);
+		    q.insert(n1.left);
 		    l=l.next;
 		    if(l!=null){
-		    	n.right = new Node(l.data);
-		    	q.insert(n.right);
+		    	n1.right = new Node(l.data);
+		    	q.insert(n1.right);
 		    	l=l.next;
 		    }	    
 		   
