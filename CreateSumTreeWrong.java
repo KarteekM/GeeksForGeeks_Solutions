@@ -9,6 +9,9 @@ class Node{
 		this.data=data;
 		right=null;
 	}
+	
+	
+	
 public class CreateSumTree {
 
 	public static int createSum(Node node){
