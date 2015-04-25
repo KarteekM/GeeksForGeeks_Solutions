@@ -57,20 +57,20 @@ public class BinarytoThreaded {
 			
 	}
 	
-	public void populateQueue(Node root,Queue<Node> q){
+	public Queue<Node> populateQueue(Node root,Queue<Node> q){
 		
 		if(null == root)
-			return ;
+			return null;
 		
 		if(root.left!=null)
-		populateQueue(root.left,q);
+		this.queue=populateQueue(root.left,q);
 		
-		q.enqueue(root);
+		this.queue.enqueue(root);
 		
 		if(root.right!=null)
-		populateQueue(root.right,q);
+	 	this.queue=populateQueue(root.right,q);
 		
-		
+		return this.queue;
 	}
 	
 	public void createThread(Node root){
