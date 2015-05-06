@@ -1,3 +1,10 @@
+/*
+ *Reference
+ *http://www.mathcs.emory.edu/~cheung/Courses/323/Syllabus/Graph/dfs.html
+ * 
+*/
+
+
 class Graph{
 	
 	int[][] matrix;
@@ -67,7 +74,3 @@ public class DFS {
 	}
 }
 
-/*
- *Reference
- * 
-*/
