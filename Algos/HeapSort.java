@@ -21,6 +21,7 @@ public class HeapSort {
 		largest = right;
 	}
 	
+
 	if(largest != index){
 		
 		//swap(maxHeap.arr[largest],maxHeap.arr[index],maxHeap);
@@ -31,8 +32,7 @@ public class HeapSort {
 		heapify(maxHeap,largest);
 	}
 		
-	}
-	
+}	
 	
 	
 	public static MaxHeap buildheap(int arr[],int size){
