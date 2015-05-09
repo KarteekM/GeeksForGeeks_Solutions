@@ -29,6 +29,8 @@ class Graph2{
 	}
 	
 
+
+
 	public void bfs(){
 	
 	Queue<Integer> q = new Queue<Integer>();
