@@ -10,6 +10,7 @@ class Graph2{
 	
 	int[][] matrix;
 	int noofNodes;
+	
 	boolean[] visited;
 	int rootNode =0;
 	
