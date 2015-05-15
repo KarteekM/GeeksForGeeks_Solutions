@@ -12,9 +12,9 @@ class Ladder{
 	Map<Integer,Integer> ladder = new HashMap<Integer,Integer>();
 }
 
-class Number{
+class Board{
 	
-	int i;
+	int position;
 	boolean hasSnake;
 	boolean hasLadder;
 	Snake s;
@@ -25,7 +25,7 @@ class Number{
 class Player{
 	
 	String name;
-	Number number;
+	Board board;
 	
 	Player(String name){
 		this.name = name;
@@ -35,6 +35,23 @@ class Player{
 
 public class SnakeandLadder {
 
-	Player player1 = new Player("Player1");
-	Player player2 = new Player("Player2");
+	public static void main(String args[]){
+		
+		Player player1 = new Player("Player1");
+		Player player2 = new Player("Player2");
+		
+		Board[] board = new Board[100];
+		int i=0;
+         System.out.println("Length is "+board.length);
+         
+         for(i=0;i<board.length;i++){
+        	 board[i].position = i+1;
+         }
+         
+         
+
+		
+	}
+
+
 }
