@@ -1,4 +1,3 @@
-
 import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,6 +70,16 @@ public class SnakeandLadder {
 		
 		playable_board.ladder[3] = new Ladder();
 		playable_board.ladder[3].ladder.put(6, 96);
+		
+		//Define specific Snakes
+		playable_board.snake[65] = new Snake();
+		playable_board.snake[65].snake.put(66, 33);
+		
+		playable_board.snake[75] = new Snake();
+		playable_board.snake[75].snake.put(76, 43);
+		
+		playable_board.snake[94] = new Snake();
+		playable_board.snake[94].snake.put(95, 53);
 	
 		
 		ArrayList<Player> playerList = new ArrayList<Player>();
@@ -104,21 +113,39 @@ public class SnakeandLadder {
 				 }
 				
 				 curr_player.player_position =curr_player.player_position + random;
-				 System.out.println("Current position for  " +curr_player.name + " is "+curr_player.player_position);
-				int currpos =curr_player.player_position;
+				 
+				  if(curr_player.player_position == 100){
+					  System.out.println(curr_player.name + " game is over");
+					   playerList.remove(curr_player);
+				  }
+				 
+				  else if(curr_player.player_position > 100)
+					  continue;
+				  
+				  else
+				  {
+					  
+						 System.out.println("Current position for  " +curr_player.name + " is "+curr_player.player_position);
+						int currpos =curr_player.player_position;
+						
+						//Check if currpos >100
+						
+						
+						
+						//Check for snake or Ladder
+						if( curr_player.board.snake[currpos-1] != null)
+						{
+							int changed_pos =curr_player.board.snake[currpos-1].snake.get(currpos);
+							curr_player.player_position =changed_pos;
+						}
+						
+						if(curr_player.board.ladder[currpos-1] != null)
+						{
+							int changed_pos =curr_player.board.ladder[currpos-1].ladder.get(currpos);
+							curr_player.player_position =changed_pos;
+						}
+				  }
 				
-				//Check for snake or Ladder
-				if( curr_player.board.snake[currpos-1] != null)
-				{
-					int changed_pos =curr_player.board.snake[currpos-1].snake.get(currpos);
-					curr_player.player_position =changed_pos;
-				}
-				
-				if(curr_player.board.ladder[currpos-1] != null)
-				{
-					int changed_pos =curr_player.board.ladder[currpos-1].ladder.get(currpos);
-					curr_player.player_position =changed_pos;
-				}
 				
 			}
 		}
