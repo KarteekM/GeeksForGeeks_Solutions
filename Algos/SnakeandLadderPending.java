@@ -16,6 +16,7 @@ class Ladder{
 
 class Board{
 	
+	
 	int position[] = new int[100];
 	boolean hasSnake;
 	boolean hasLadder;
