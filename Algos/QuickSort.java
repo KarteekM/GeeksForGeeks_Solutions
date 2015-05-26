@@ -9,6 +9,7 @@ public class QuickSort {
 		
 	}
 	
+	
 	public static int partition(int a[],int low,int high){
 		int i =low-1;
 		int x = a[high];
