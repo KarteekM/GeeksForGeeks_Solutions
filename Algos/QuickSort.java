@@ -25,6 +25,8 @@ public class QuickSort {
 	}
 	public static void quicksort(int a[],int low,int high){
 		
+		
+		
 		if(low <high){
 			int p = partition(a,low,high);
 			quicksort(a,low,p-1);
