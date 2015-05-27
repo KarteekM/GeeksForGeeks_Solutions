@@ -21,6 +21,7 @@ public class CheckCycle {
 		
 	}
 	
+	
 	public void addEdge(int x,int y){		
 		adj.get(x).add(y);		
 	}
