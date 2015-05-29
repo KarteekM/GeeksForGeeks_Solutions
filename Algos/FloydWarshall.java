@@ -1,7 +1,7 @@
 
 public class FloydWarshall {
 	
-	public static final int INF = 99999;
+	public static final int INF = 999999;
 	
 	public static void print(int a[][]){
 		
