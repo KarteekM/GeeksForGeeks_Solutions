@@ -4,6 +4,7 @@ import java.util.*;
 Reference:http://ideone.com/U3pGNE 
 This doesnt work for all inputs.Need to be enhanced to work for all inputs
 */
+
 public class CheckCycle {
 
 	HashMap<Integer,LinkedList<Integer>> adj;
