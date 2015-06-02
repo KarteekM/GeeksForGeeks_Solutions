@@ -12,6 +12,8 @@ public class HeapSort {
 	int temp;
 	
 	
+	
+	
 	if(left< maxHeap.size && maxHeap.arr[left] > maxHeap.arr[largest]){
 		largest =left;
 	}
