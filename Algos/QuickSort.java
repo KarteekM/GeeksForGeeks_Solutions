@@ -2,6 +2,9 @@
 public class QuickSort {
 
 
+
+
+
 	
 	public static void swap(int a[],int x,int y){
 		int temp;
