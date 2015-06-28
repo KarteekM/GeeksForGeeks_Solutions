@@ -23,6 +23,17 @@ public class WaterBlocks {
 		System.out.println(res);
 		
 	}
+	
+	public static int calc(List<Integer> final_array){
+		int i=0;
+		int sum=0;
+		
+		for(i=0;i<final_array.size();i++){
+			
+			sum = sum + final_array.get(0) - final_array.get(i);
+		}
+		return sum;
+	}
 
 	private static int calcWaterStored(int[] buildingBlocks) {
 		// TODO Auto-generated method stub
@@ -58,24 +69,32 @@ public class WaterBlocks {
 		//Actual logic
 		List<Integer> final_array = new ArrayList<Integer>();
 		int x=0;
+		int finalsum=0;
 		
 		for(i=0,j=1;i<a_size && j<a_size;i++,j++){
 			
 			while(store_array.get(i) > store_array.get(j)){
-				final_array.add(store_array.get(i));				
+				final_array.add(store_array.get(i));
+				i++;
+				j++;
 			}
 			final_array.add((store_array.get(i)));
 			
 			if(final_array.get(0) > store_array.get(j)){		        	
 				final_array.remove(0);
 				final_array.add(0, store_array.get(j));
+				finalsum =finalsum +calc(final_array);
 			}
 			
+			else{
+				finalsum =finalsum +calc(final_array);
+			}
+			final_array = new ArrayList<Integer>();
 			
 		}
 		
 		
-		return 5;
+		return finalsum;
 	}
 
 }
