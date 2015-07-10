@@ -2,7 +2,6 @@
 public class Node {
 
 
-
 private int nodeId;
 private boolean visited;
 
