@@ -11,6 +11,7 @@ class Node{
 	}
 public class CheckFullBinaryTree {
 	
+	
 	public static boolean checkFull(Node node){
 		
 		if(null ==  node)
@@ -39,16 +40,10 @@ public class CheckFullBinaryTree {
 	 
 	    root.left.left.left = new Node(80);
 	    root.left.left.right = new Node(90);
-	    root.left.right.left = new Node(80);
-	    root.left.right.right = new Node(90);
-	    root.right.left.left = new Node(80);
-	    root.right.left.right = new Node(90);
-	    root.right.right.left = new Node(80);
-	    root.right.right.right = new Node(90);
+
 	   // root.right.right.right.right = new Node(100);
 	    if(checkFull(root))
 	    	System.out.println("Tree is full");
-	    
 	    else
 	    	System.out.println("Tree is not full");
 	 
