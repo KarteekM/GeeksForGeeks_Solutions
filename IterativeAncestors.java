@@ -3,6 +3,8 @@ public class IterativeAncestor {
 	
 	public static void iterativeAncestor(Node node,int data){
 		
+		
+		
 		if(node == null)
 			return ;
 		
@@ -45,8 +47,7 @@ public class IterativeAncestor {
 		root.right = new Node(3);
 		root.left.left = new Node(4);
 		root.left.right = new Node(5);
-		root.right.right = new Node(7);
-		iterativeAncestor(root,7);
+	        iterativeAncestor(root,7);
 		
 	}
 
