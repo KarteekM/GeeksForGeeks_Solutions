@@ -9,6 +9,9 @@ class Node2{
 		this.left=null;
 		this.right=null;
 		this.rightpointer=null;		
+		
+		
+		
 	}
 }
 
