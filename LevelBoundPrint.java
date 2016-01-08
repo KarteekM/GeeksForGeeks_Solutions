@@ -2,6 +2,7 @@ import java.util.LinkedList;
 
 class Queue<E> {
 	
+	
 	 private LinkedList<E> list = new LinkedList<E>();
 
 	 
