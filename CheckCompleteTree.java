@@ -1,4 +1,5 @@
  class Node{
+ 	
 	
 	Node left;
 	int data;
