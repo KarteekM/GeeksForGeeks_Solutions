@@ -1,6 +1,8 @@
 
 public class ConstructTreefromInandPre {
 	
+	
+	
 	static int preindex=0;
 	public static Node constructTree(int pre[],int in[],int start,int end){		
 		
