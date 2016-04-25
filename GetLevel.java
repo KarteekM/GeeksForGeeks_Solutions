@@ -5,6 +5,8 @@ public class GetLevel {
 		
 		if(node == null)
 			return 0;
+			
+			
 		
 		if(node.data == value)
 		{
