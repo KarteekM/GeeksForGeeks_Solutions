@@ -3,8 +3,6 @@ class Node{
 	Node left;
 	int data;
 	Node right;
-	
-
 
 
 	Node(int data){
