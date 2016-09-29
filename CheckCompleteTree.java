@@ -10,6 +10,8 @@
 		this.data=data;
 		right=null;
 	}
+	 
+	 
 }
 public class CheckCompleteTree {
 
