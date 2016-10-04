@@ -4,6 +4,7 @@ class Node2{
 	Node2 right;
 	Node2 rightpointer;
 	
+	
 	Node2(int data){
 		this.data =data;
 		this.left=null;
