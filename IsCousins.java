@@ -1,8 +1,7 @@
 
 public class IsCousins {
 	
-	
-	public boolean issibling(Node root,Node n1,Node n2){
+		public boolean issibling(Node root,Node n1,Node n2){
 		
 		if(null == root){
 			return false;
