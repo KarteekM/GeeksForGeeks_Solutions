@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 class Snake{
 	
 	Map<Integer,Integer> snake = new HashMap<Integer,Integer>();
