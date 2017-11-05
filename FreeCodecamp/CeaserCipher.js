@@ -1,5 +1,6 @@
 function rot13(str) { // LBH QVQ VG!
   
+	
     str = str.toUpperCase();
   var decodedChar = [];
   for(var i=0;i<str.length;i++){
