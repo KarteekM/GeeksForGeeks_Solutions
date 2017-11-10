@@ -1,0 +1,42 @@
+
+function sumPrimes(num){
+	
+	var sumOfPrimes = 0;
+
+	function checkPrimeFunction(numberPassed){
+		
+	
+		var countForPrime = 0;
+		
+			
+		for(var j=1;j<=numberPassed;j++){
+			
+			if(numberPassed%j === 0){
+				countForPrime++;
+			}
+			
+		}
+		
+		if(countForPrime == 2){
+			return true;
+		}
+		else{
+			return false;
+		}
+		
+ }
+ 
+   for(var i=2;i<=num;i++){
+	   
+	   var returnValue = checkPrimeFunction(i);
+	   if(returnValue === true ){
+		   
+		    sumOfPrimes =sumOfPrimes + i;
+		    
+	   }
+	   
+   }
+   
+   return sumOfPrimes;
+   
+}	
