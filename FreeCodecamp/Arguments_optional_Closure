@@ -1,5 +1,4 @@
 function addTogether() {
-
   
   var b =arguments[1];
   var a = arguments[0];
