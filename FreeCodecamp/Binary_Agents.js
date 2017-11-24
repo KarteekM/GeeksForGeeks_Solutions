@@ -18,3 +18,7 @@ function binaryAgent(str) {
   return finalsentence;
   
 }
+
+
+
+
