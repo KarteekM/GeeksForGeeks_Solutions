@@ -1,4 +1,5 @@
 function palindrome(str) {
+	
     str = str.toLowerCase().replace(/[\W_]/g, '');
  var i=0;
  var j = str.length-1;
@@ -12,5 +13,3 @@ function palindrome(str) {
 }
 
 
-
-palindrome("eye");
