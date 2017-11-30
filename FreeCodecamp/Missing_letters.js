@@ -1,6 +1,5 @@
 function fearNotLetter(str) {
-    
-  
+      
   var prev = str.charCodeAt(0);
   
   for(var i=1;i<str.length;i++){
