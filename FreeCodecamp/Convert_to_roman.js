@@ -1,7 +1,9 @@
 function convertToRoman(num) {
 var romanNumber ='';
-var romanDecimalMapping = [
-	{ d:1, r:'I' },
+var romanDecimalMapping =
+    [
+	    
+    { d:1, r:'I' },
     { d:4, r:'IV' },
     { d:5, r:'V' },
     { d:9, r:'IX' },
