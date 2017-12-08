@@ -1,4 +1,5 @@
 function diffArray(arr1,arr2){
+	
 var newArr = [];
 
   var k =0;
