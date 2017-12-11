@@ -1,6 +1,7 @@
 
 function pairElement(str) {
 	
+	
 var twodArray = [];
 var arrayToBePushed = [];
 
