@@ -16,8 +16,9 @@ public class CheckCompleteTree {
 
 	public static int count(Node node){
 		
-		if(null == node)
+		if(null == node){
 			return 0;
+		}
 		
 		return (1 + count(node.left) + count(node.right));
 		
