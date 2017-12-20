@@ -19,6 +19,8 @@ public class Ancestors {
 		
 		for(i=0;i<index;i++){
 			System.out.println(a[i]);
+		
+		
 		}
 		
 		
