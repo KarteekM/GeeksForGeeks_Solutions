@@ -24,6 +24,8 @@ public class WaterBlocks {
 		
 	}
 	
+	
+	
 	public static int calc(List<Integer> final_array){
 		int i=0;
 		int sum=0;
