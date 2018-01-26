@@ -14,6 +14,7 @@ class Trie_Node {
 }
 
 class Trie {
+	
 
 	private Trie_Node root;
 	int count;
