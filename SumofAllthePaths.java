@@ -16,6 +16,9 @@ public class SumofAllthePaths {
 		if(null == node){
 			return 0;
 		}
+
+
+
 		
 		value = value*10 +node.data;
 		
