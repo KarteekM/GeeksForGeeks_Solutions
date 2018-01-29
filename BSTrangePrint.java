@@ -13,6 +13,8 @@ class Node{
 
 public class BSTrangePrint {
 	
+	
+	
 public static void create(Node root,int data){
 		
 		if(null == root)
