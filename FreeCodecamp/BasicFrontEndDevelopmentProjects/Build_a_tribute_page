@@ -1,18 +1,32 @@
-<html>
-<h1>A. P. J. Abdul Kalam</h1>
-<h2>Inspiration to youth</h2>
-<h4>Here are the list of achievements made by Dr.Kalam<h4>
-<ul>
-<li> 1981 :  Padma Bhushan  </li>
-<li><strong> 1990 : </strong> Padma Vibhushan  </li>
-<li><strong> 1994 : </strong> Distinguished Fellow</li>
-<li><strong> 1995 : </strong> Honorary Fellow  </li>
-<li><strong> 1997 : </strong> Bharat Ratna </li>
-</ul>
-
-<div>
-“Don’t take rest after your first victory because if you fail in second,
- more lips are waiting to say that your first victory was just luck."
-</div>
-
-</html>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="text-center">Dr.A.P.J Abdul Kalam</h1>
+        <h2 class="text-center"><em>The man who inspired Indian youth</em></h2>
+        <div class="thumbnail"><img src="http://www.india.com/wp-content/uploads/2015/10/3112.jpg">
+          <div class="caption text-center">Kalam a great visionary</div>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3>Here's the list of achievements Dr.Kalam has made in his life</h3>
+		<ul>
+        <li><strong>1981</strong>  Padma Bhushan  </li>
+        <li><strong>1990</strong> Padma Vibhushan  </li>
+        <li><strong>1994</strong> Distinguished Fellow</li>
+        <li><strong>1995</strong> Honorary Fellow  </li>
+        <li><strong>1997</strong> Bharat Ratna </li>
+        </ul>	
+          <blockquote>
+            <p>"A simple man, of childlike demeanour, practical, caring and endearing to all"</p>
+            <footer><cite>Indian SuperStar Amitab Bacchan</cite></footer>
+          </blockquote>
+          <h3>If you have time, you should read more about this incredible human being on his <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target="_blank">Wikipedia entry</a>.</h3>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <footer class="text-center">
+    <hr>
+    <p>Written and coded by <a href="https://www.freecodecamp.org/karteekm" target="_blank">Karteek Majety</a>.</p>
+  </footer>  
+</div>  
