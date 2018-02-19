@@ -1,7 +1,6 @@
 
 public class BinaryTreetoLinkedList {
-	
-		
+			
 	public static Node convert(Node node){
 		
 		if(null == node){
