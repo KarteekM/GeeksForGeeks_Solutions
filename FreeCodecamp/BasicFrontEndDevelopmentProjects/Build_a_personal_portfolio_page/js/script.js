@@ -8,7 +8,7 @@ $(document).ready(function(){
 	});
 	wow.init();
 
-	var myLatlng = new google.maps.LatLng(17.4553194, 78.3478139);
+	var myLatlng = new google.maps.LatLng(12.9701097, 77.70119049999994);
     var mapOptions = {
         zoom: 14,
         center: myLatlng,
