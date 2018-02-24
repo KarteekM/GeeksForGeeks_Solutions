@@ -3,6 +3,8 @@ var Person = function(firstAndLast) {
     // Complete the method below and implement the others similarly
 
    var fullName = firstAndLast;
+   
+   
   
   this.getFirstName = function(){
 	  return fullName.split(" ")[0];
