@@ -484,7 +484,7 @@ Modules - reusable parts of our design
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 100%;
   margin: 0 auto;
-  background-color: #666666;
+  background-color: #6A5ACD;
 }
 
 .cd-container {
