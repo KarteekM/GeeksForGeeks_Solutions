@@ -22,6 +22,8 @@ public class ConstructTreefromInandPre {
 		
 		return n;
 		
+		
+		
 	}
 	
 	public static int search(int data,int arr[]){
