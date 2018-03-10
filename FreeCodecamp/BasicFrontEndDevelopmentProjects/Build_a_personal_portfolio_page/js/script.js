@@ -64,7 +64,7 @@ function initMap() {
         });
       }
 
-var isShowingChatIcon = true;
+/* var isShowingChatIcon = true;
 
 function onChatButtonClicked(){
   if( isShowingChatIcon){
@@ -82,4 +82,4 @@ function onChatButtonClicked(){
     document.getElementById('chat-button-icons').className += "glyphicon-comment"; 
     isShowingChatIcon = true ;
   }
-}
+} */
