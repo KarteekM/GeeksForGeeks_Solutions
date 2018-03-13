@@ -1,0 +1,61 @@
+function checkCashRegister() {
+	var price = 19.50;
+	var cash = 20.00;
+	var cid = [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]];
+	
+	var denomination = {"PENNY":0.01,"NICKEL":0.05,"DIME": 0.10,"QUARTER" : 0.25,"ONE":1.00, "FIVE":5.00, "TEN":10.00, "TWENTY" :20.00, "ONE HUNDRED":100.00};
+	
+	var totalChange = calculateTotalChange(cid);
+	var changeToBeGiven = cash-price;
+	
+	
+	if(totalChange < changeToBeGiven ){
+		return "Insufficient funds";
+	}
+	
+	else if(totalChange ==  changeToBeGiven ){
+		return "Closed";
+	}
+	
+	else{
+		var i =1;
+		var currentDenominationValue;
+		var currentDenominationName;
+		var currentDenominationCount=0;
+		var changeFinallyToBeReturned = [];
+		while(changeToBeGiven > 0){
+			currentDenominationName = cid[cid.length-i][0];
+			currentDenominationValue = denomination[currentDenominationName];
+			if(changeToBeGiven >= currentDenominationValue && cid[cid.length-i][1] > 0){
+				changeToBeGiven = changeToBeGiven - currentDenominationValue;
+				cid[cid.length-i][1] = cid[cid.length-i][1]-currentDenominationValue;
+				currentDenominationCount++;				
+			}
+			
+			else if(changeToBeGiven < currentDenominationValue || cid[cid.length-i][1] <= 0 ){
+				if(currentDenominationCount > 0){
+				changeFinallyToBeReturned.push([currentDenominationName,currentDenominationCount*currentDenominationValue]);
+				}
+				currentDenominationCount = 0;
+				i++;
+			}
+			
+		}
+		
+		
+	}
+  var changeFinallyToBeReturned;
+  // Here is your change, ma'am.
+  return changeFinallyToBeReturned;
+}
+
+function calculateTotalChange(cid){
+	
+	var total = 0;
+	for(var i=0;i<cid.length;i++){
+      total =total + cid[i][1];
+ 	  
+	}
+	
+	return total;
+}
