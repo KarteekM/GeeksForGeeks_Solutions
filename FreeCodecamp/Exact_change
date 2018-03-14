@@ -1,16 +1,16 @@
-function checkCashRegister() {
-	var price = 19.50;
-	var cash = 20.00;
-	var cid = [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]];
-	
-	var denomination = {"PENNY":0.01,"NICKEL":0.05,"DIME": 0.10,"QUARTER" : 0.25,"ONE":1.00, "FIVE":5.00, "TEN":10.00, "TWENTY" :20.00, "ONE HUNDRED":100.00};
-	
+
+function checkCashRegister(price, cash, cid) {
+
+  var denomination = {"PENNY":0.01,"NICKEL":0.05,"DIME": 0.10,"QUARTER" : 0.25,"ONE":1.00, "FIVE":5.00, "TEN":10.00, "TWENTY" :20.00, "ONE HUNDRED":100.00};
+
+		var changeFinallyToBeReturned = [];
 	var totalChange = calculateTotalChange(cid);
-	var changeToBeGiven = cash-price;
+	var changeToBeGiven = parseFloat(cash-price).toFixed(2);
+  var actualChange = changeToBeGiven;
 	
 	
 	if(totalChange < changeToBeGiven ){
-		return "Insufficient funds";
+		return "Insufficient Funds";
 	}
 	
 	else if(totalChange ==  changeToBeGiven ){
@@ -22,17 +22,24 @@ function checkCashRegister() {
 		var currentDenominationValue;
 		var currentDenominationName;
 		var currentDenominationCount=0;
-		var changeFinallyToBeReturned = [];
-		while(changeToBeGiven > 0){
+		
+		while(changeToBeGiven > 0 && i<=cid.length){
 			currentDenominationName = cid[cid.length-i][0];
 			currentDenominationValue = denomination[currentDenominationName];
 			if(changeToBeGiven >= currentDenominationValue && cid[cid.length-i][1] > 0){
-				changeToBeGiven = changeToBeGiven - currentDenominationValue;
-				cid[cid.length-i][1] = cid[cid.length-i][1]-currentDenominationValue;
-				currentDenominationCount++;				
+				changeToBeGiven = parseFloat(changeToBeGiven - currentDenominationValue).toFixed(2);
+				cid[cid.length-i][1] = parseFloat(cid[cid.length-i][1]-currentDenominationValue).toFixed(2);
+				currentDenominationCount++;
+                 
+                   if(changeToBeGiven == 0){
+					   changeFinallyToBeReturned.push([currentDenominationName,currentDenominationCount*currentDenominationValue]);
+					   
+				   }				 
+				
 			}
 			
-			else if(changeToBeGiven < currentDenominationValue || cid[cid.length-i][1] <= 0 ){
+						
+			else if( changeToBeGiven < currentDenominationValue || cid[cid.length-i][1] <= 0 ){
 				if(currentDenominationCount > 0){
 				changeFinallyToBeReturned.push([currentDenominationName,currentDenominationCount*currentDenominationValue]);
 				}
@@ -44,9 +51,16 @@ function checkCashRegister() {
 		
 		
 	}
-  var changeFinallyToBeReturned;
+
+  var finalCheckOfChange = parseFloat((calculateTotalChange(changeFinallyToBeReturned) -  actualChange)).toFixed(2);
+ if(finalCheckOfChange != 0){
+	 return "Insufficient Funds";
+ }
+
   // Here is your change, ma'am.
   return changeFinallyToBeReturned;
+  
+  
 }
 
 function calculateTotalChange(cid){
@@ -59,3 +73,16 @@ function calculateTotalChange(cid){
 	
 	return total;
 }
+
+// Example cash-in-drawer array:
+// [["PENNY", 1.01],
+// ["NICKEL", 2.05],
+// ["DIME", 3.10],
+// ["QUARTER", 4.25],
+// ["ONE", 90.00],
+// ["FIVE", 55.00],
+// ["TEN", 20.00],
+// ["TWENTY", 60.00],
+// ["ONE HUNDRED", 100.00]]
+
+checkCashRegister(19.50, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]);
