@@ -1,3 +1,3 @@
 # Programs_Trees
 Trees Practice
-Trying to commit some data to Github.This is my first acess to GitHub.
+This project contains solutions for the questions posted in GeeksForGeeks.The programming language predominantly used is JAVA.Contributions are most welcome.
